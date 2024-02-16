@@ -24,6 +24,7 @@ footer {
 }
 
 .bg-main {
+	position: relative;
 	width: 100%;
 	overflow: hidden;
 
@@ -47,8 +48,14 @@ footer {
 		bottom: 0;
 		left: 50%;
 		width: 100%;
-		background-image: url(../../img/bg-wave.svg);
+		height: 100%;
+		background-image: url(../../img/bg-wave.svg), linear-gradient(to bottom, transparent 1200px, #6a0e91 1200px);
+		background-repeat: no-repeat;
 		transform: translateX(-50%);
+
+		@media (min-width: 1920px) {
+			background-size: cover;
+		}
 	}
 }
 
@@ -375,13 +382,13 @@ span.people {
 }
 
 .slider__button-prev {
-	left: 0;
-	background-image: url(../../img/slider-left.svg);
+	right: 0;
+	background-image: url(../../img/slider-right.svg);
 }
 
 .slider__button-next {
-	right: 0;
-	background-image: url(../../img/slider-right.svg);
+	left: 0;
+	background-image: url(../../img/slider-left.svg);
 }
 
 .slider {
