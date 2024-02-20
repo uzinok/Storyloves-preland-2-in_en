@@ -16,5 +16,10 @@ const swiper = new Swiper('.swiper', {
 		nextEl: '.slider__button-prev',
 		prevEl: '.slider__button-next',
 	},
-
 });
+
+// $('.popup-open').click(function(e) {
+// 	e.preventDefault();
+// 	console.log($('.popup-open'));
+// 	return false;
+// });

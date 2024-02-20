@@ -7,13 +7,14 @@
 	<title>StoryLoves</title>
 	<link rel="stylesheet" href="./styles/main.css">
 	<link rel="stylesheet" href="./static/swiper-bundle.min.css">
+	<link rel="stylesheet" href="./static/jquery.modal.min.css" />
 </head>
 
 <body>
-
+	<script src="https://ctr-localhost.ru/vlad/jq.js"></script>
 	<div class="bg-main">
 		<header class="header">
-			<a href="#" class="logo">
+			<a href="#ex1" class="logo" rel="modal:open">
 				<img src="./img/logo.svg" alt="StoryLoves" width="273" height="74">
 			</a>
 
@@ -83,7 +84,7 @@
 							</div>
 							<!-- slider__content -->
 
-							<a href="#" class="slider__button">Send a message</a>
+							<a href="#ex1" class="slider__button" rel="modal:open">Send a message</a>
 
 						</article>
 						<!-- /slider__item -->
@@ -133,7 +134,7 @@
 							</div>
 							<!-- slider__content -->
 
-							<a href="#" class="slider__button">Send a message</a>
+							<a href="#ex1" class="slider__button" rel="modal:open">Send a message</a>
 
 						</article>
 						<!-- /slider__item -->
@@ -175,7 +176,7 @@
 							</div>
 							<!-- slider__content -->
 
-							<a href="#" class="slider__button">Send a message</a>
+							<a href="#ex1" class="slider__button" rel="modal:open">Send a message</a>
 
 						</article>
 						<!-- /slider__item -->
@@ -191,16 +192,189 @@
 				<button class="slider__button-next"></button>
 
 			</section>
+
+			<!-- #ex1 -->
+			<div id="ex1" class="modal">
+				<!-- .form-step-wrapper -->
+				<div class="form-step-wrapper">
+					<input name="ccode" type="hidden" value="GB" />
+
+					<h1>Your info</h1>
+
+					<!-- .form-step-item -->
+					<div class="form-step-item active">
+						<label for="name">Username:</label>
+						<div class="input-wrap">
+							<input id="name" name="name" type="text">
+							<div class="error-message"></div>
+						</div>
+
+						<p class="sub-step">
+							<span> Registration at Storyloves </span>
+							<span> <b> FREE </b></span>
+						</p>
+
+						<button class="lt_button_next button">Next</button>
+					</div>
+					<!-- /.form-step-item -->
+
+					<!-- .form-step-item -->
+					<div class="form-step-item">
+						<label for="age-field">Age:</label>
+						<div class="input-wrap">
+							<select name="age" id="age-field">
+								<option value="18">18</option>
+								<option value="19">19</option>
+								<option value="20">20</option>
+								<option value="21">21</option>
+								<option value="22">22</option>
+								<option value="23">23</option>
+								<option value="24">24</option>
+								<option value="25">25</option>
+								<option value="26">26</option>
+								<option value="27">27</option>
+								<option value="28">28</option>
+								<option value="29">29</option>
+								<option value="30">30</option>
+								<option value="31">31</option>
+								<option value="32">32</option>
+								<option value="33">33</option>
+								<option value="34">34</option>
+								<option value="35">35</option>
+								<option value="36">36</option>
+								<option value="37">37</option>
+								<option value="38">38</option>
+								<option value="39">39</option>
+								<option value="40">40</option>
+								<option value="41">41</option>
+								<option value="42">42</option>
+								<option value="43">43</option>
+								<option value="44">44</option>
+								<option value="45">45</option>
+								<option value="46">46</option>
+								<option value="47">47</option>
+								<option value="48">48</option>
+								<option value="49">49</option>
+								<option value="50">50</option>
+								<option value="51">51</option>
+								<option value="52">52</option>
+								<option value="53">53</option>
+								<option value="54">54</option>
+								<option value="55">55</option>
+								<option value="56">56</option>
+								<option value="57">57</option>
+								<option value="58">58</option>
+								<option value="59">59</option>
+								<option value="60">60</option>
+								<option value="61">61</option>
+								<option value="62">62</option>
+								<option value="63">63</option>
+								<option value="64">64</option>
+								<option value="65">65</option>
+								<option value="66">66</option>
+								<option value="67">67</option>
+								<option value="68">68</option>
+								<option value="69">69</option>
+								<option value="70">70</option>
+								<option value="71">71</option>
+								<option value="72">72</option>
+								<option value="73">73</option>
+								<option value="74">74</option>
+								<option value="75">75</option>
+								<option value="76">76</option>
+								<option value="77">77</option>
+								<option value="78">78</option>
+							</select>
+							<div class="error-message"></div>
+						</div>
+
+						<p class="sub-step">
+							<span> Storyloves prohibits </span>
+							<span> the registration of girls working in </span>
+							<span> escort agencies </span>
+						</p>
+
+						<button class="lt_button_next button">Next</button>
+					</div>
+					<!-- /.form-step-item -->
+
+					<!-- .form-step-item -->
+					<div class="form-step-item">
+						<label for="city">My location:</label>
+						<div class="input-wrap">
+							<input type="text" name="city" id="city">
+							<div class="error-message"></div>
+						</div>
+
+						<p class="sub-step">
+							<span> The program finds girls </span>
+							<span> in radius of <b>30 km</b> from you </span>
+						</p>
+
+						<button class="lt_button_next button">Next</button>
+					</div>
+					<!-- /.form-step-item -->
+
+					<!-- .form-step-item -->
+					<div class="form-step-item">
+						<label for="email">My email:</label>
+						<div class="input-wrap">
+							<input name="email" type="text" id="email">
+							<div class="error-message"></div>
+						</div>
+
+						<p class="sub-step">
+							<span> Turn a common evening </span>
+							<span> into unforgettable one - spend it </span>
+							<span> with a girl. </span>
+							<span> The rest is on you! </span>
+						</p>
+
+						<button class="lt_button_next button">Next</button>
+					</div>
+					<!-- /.form-step-item -->
+
+					<!-- .form-step-item -->
+					<div class="form-step-item">
+						<label for="password">My password:</label>
+						<div class="input-wrap">
+							<input name="password" type="password" id="password">
+							<div class="error-message"></div>
+						</div>
+
+						<p class="sub-step">
+							<span> Create a password for the site </span>
+						</p>
+
+						<button class="lt_button_next button">Next</button>
+					</div>
+					<!-- /.form-step-item -->
+
+				</div>
+				<!-- /.form-step-wrapper -->
+			</div>
+			<!-- /.form-step-wrapper -->
+
+			<ul id="errors" style="display: none;">
+				<li data-empty=""> This field is mandatory</li>
+				<li data-age18=""> You must be at least 18</li>
+				<li data-password=""> The password should be at least 6 characters long</li>
+				<li data-email=""> Email is incorrect</li>
+				<li data-emailexists=""> User with this email already exists</li>
+				<li data-noresult=""> No results</li>
+			</ul>
+			<!-- /#ex1 -->
+
 		</main>
 
 		<footer class="footer">
-			<a href="#" class="logo">
+			<a href="#ex1" class="logo" rel="modal:open">
 				<img src="./img/logo.svg" alt="StoryLoves" width="273" height="74">
 			</a>
 
 			<p>Connects hearts, cities and countries!</p>
 
-			<a href="#" class="button">Free registration</a>
+			<a href="#ex1" class="button" rel="modal:open">Free registration</a>
 		</footer>
 
 		<div class="ac_footer">
@@ -213,6 +387,9 @@
 
 
 	<script src="./static/swiper-bundle.min.js"></script>
+	<script src="./static/jquery.modal.min.js"></script>
+	<script src="./static/story-love.validation.js"></script>
+	<script src="./static/common.js"></script>
 	<script src="./scripts/main.min.js"></script>
 </body>
 
