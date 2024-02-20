@@ -34,7 +34,7 @@ $(function() {
 			*/
 			steps.eq(nextIndex - 1).removeClass("active");
 			$("body").attr("data-current-step", nextIndex + 1);
-			steps.eq(nextIndex).addClass("active");				
+			steps.eq(nextIndex).addClass("active");
 
 			// code used when all steps visible
 			// V.check();
