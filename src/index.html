@@ -206,6 +206,7 @@
 					<div class="form-step-item active">
 						<div class="input-wrap">
 							<input id="name" name="name" type="text" placeholder="Name">
+							<label for="name">Name <span>*</span></label>
 							<div class="error-message"></div>
 						</div>
 
@@ -294,6 +295,7 @@
 					<div class="form-step-item">
 						<div class="input-wrap">
 							<input type="text" name="city" id="city" placeholder="Location">
+							<label for="city">Location <span>*</span></label>
 							<div class="error-message"></div>
 						</div>
 
@@ -304,6 +306,7 @@
 					<div class="form-step-item">
 						<div class="input-wrap">
 							<input name="email" type="text" id="email" placeholder="Email">
+							<label for="name">Email <span>*</span></label>
 							<div class="error-message"></div>
 						</div>
 					</div>
@@ -312,7 +315,9 @@
 					<!-- .form-step-item -->
 					<div class="form-step-item">
 						<div class="input-wrap">
-							<input name="password" type="password" id="password" placeholder="Password">
+							<input name="password" type="password" id="password" placeholder="Password" class="input-password">
+							<label for="name">Password <span>*</span></label>
+							<button type="button" class="form__password-toggle" aria-label="show/hide password"></button>
 							<div class="error-message"></div>
 						</div>
 					</div>

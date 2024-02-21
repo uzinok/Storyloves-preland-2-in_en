@@ -18,6 +18,19 @@ const swiper = new Swiper('.swiper', {
 	},
 });
 
+const buttonPassword = document.querySelector('.form__password-toggle');
+const inputPassword = document.querySelector('.input-password');
+
+buttonPassword.addEventListener('click', function() {
+	if (this.classList.contains('form__password-toggle--v')) {
+		inputPassword.type = 'text';
+		buttonPassword.classList.remove('form__password-toggle--v');
+	} else {
+		inputPassword.type = 'password';
+		buttonPassword.classList.add('form__password-toggle--v');
+	}
+})
+
 $(function() {
 	$(".only_number").on("keydown", function(event) {
 		if (

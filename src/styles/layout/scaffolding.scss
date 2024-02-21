@@ -242,6 +242,7 @@ span.people {
 	text-decoration: none;
 	background-color: #8121AA;
 	border-radius: 100px;
+	box-shadow: 0 10px 20px 0 rgba(129, 33, 170, 0.4);
 	transition: opacity 0.25s ease-in-out;
 
 	&:hover {
@@ -493,6 +494,8 @@ span.people {
 }
 
 div.modal {
+	width: 100%;
+	max-width: 470px;
 	padding: 26px 15px 32px;
 	color: #000000;
 	background-color: #ffffff;
@@ -527,8 +530,8 @@ div.modal {
 			right: 0;
 			width: 37px;
 			height: 37px;
-			transform: translate(100%, -100%);
 			background-color: #ffffff;
+			transform: translate(100%, -100%);
 		}
 	}
 
@@ -569,14 +572,7 @@ div.modal {
 		margin-bottom: 15px;
 	}
 
-	& label {
-		display: block;
-		margin-bottom: 10px;
-		font-weight: bold;
-		font-size: 14px;
-		text-transform: uppercase;
-	}
-
+	& label,
 	& input,
 	& select,
 	& .select-value {
@@ -585,12 +581,17 @@ div.modal {
 		width: 100%;
 		height: 55px;
 		padding: 5px 20px;
-		font-weight: 600;
+		font-weight: 500;
+		font-size: 16px;
 		line-height: 45px;
+		font-family: inherit;
 		color: #8121AA;
 		border: 1px solid #8121AA;
 		border-radius: 5px;
-		font-family: inherit;
+	}
+
+	.input-password {
+		padding-right: 55px;
 	}
 
 	& .select-value {
@@ -600,6 +601,34 @@ div.modal {
 		background-position: right 17px center;
 		appearance: none;
 	}
+
+	& label {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		margin-bottom: 10px;
+		font-weight: bold;
+		font-weight: 500;
+		font-size: 14px;
+		color: #757575;
+		border: 0;
+		pointer-events: none;
+
+		& span {
+			color: #C43316;
+		}
+	}
+
+	& input:not(:placeholder-shown) + label {
+		opacity: 0;
+	}
+}
+
+input::placeholder {
+	color: transparent;
+	opacity: 0;
 }
 
 .active {
@@ -663,6 +692,7 @@ div.modal {
 	flex-direction: row;
 	justify-content: flex-start;
 	align-items: center;
+	font-weight: 500;
 }
 
 .form-select .select-dropdown {
@@ -713,14 +743,23 @@ div.modal {
 		vertical-align: text-bottom;
 		border: 1px solid #757575;
 		border-radius: 3px;
+		appearance: none;
+
+		&:checked {
+			background-image: url(../../img/checkbox.svg);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+		}
 	}
 }
 
-.modal button {
+.modal .lt_button_next {
 	display: block;
+	width: 100%;
 	max-width: 350px;
 	margin: 0 auto;
-	padding: 17px 28px;
+	padding: 26px 28px;
 	font-weight: 700;
 	font-weight: 800;
 	font-size: 18px;
@@ -729,9 +768,11 @@ div.modal {
 	color: #ffffff;
 	text-transform: uppercase;
 	text-decoration: none;
+	letter-spacing: 0.02em;
 	background-color: #8121AA;
 	border: 0;
 	border-radius: 100px;
+	box-shadow: 0 10px 20px 0 rgba(129, 33, 170, 0.4);
 	transition: opacity 0.25s ease-in-out;
 
 	&:hover {
@@ -740,5 +781,56 @@ div.modal {
 
 	&:active {
 		opacity: 0.4;
+	}
+}
+
+.blocker {
+	@media (max-width: $max-md) {
+		padding-right: 0 !important;
+		padding-left: 0 !important;
+	}
+}
+
+.form__password-toggle {
+	position: relative;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	width: 55px;
+	height: 55px;
+	background-color: transparent;
+	border: 0;
+	transform: translateY(-50%);
+	appearance: none;
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 24px;
+		height: 24px;
+		background-image: url(../../img/pass-h.svg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		transform: translate(-50%, -50%);
+		transition: opacity 0.25s ease-in-out;
+	}
+
+	&::after {
+		background-image: url(../../img/pass-v.svg);
+		opacity: 0;
+	}
+
+	&--v {
+		&::after {
+			opacity: 1;
+		}
+
+		&::before {
+			opacity: 0;
+		}
 	}
 }
